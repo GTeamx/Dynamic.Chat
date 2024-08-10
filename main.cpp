@@ -44,10 +44,10 @@ int main() {
                  "                       ╚██████╗██║  ██║██║  ██║   ██║               \n"
                  "                        ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝               v1\n\n\n" << std::endl;
 
-    std::cout << "* Your key is '" + encryptionKey + "'\n"
-        << "* The other users have to run 'addmdp " + encryptionKey + "' to be able to chat with you.\n"
-        << "* To receive other users messages do 'addmdp theirkey'\n"
-        << "* You can change your key using 'mdp yournewkey'\n" << std::endl;
+    std::cout << "* Votre mot de passe est '" + encryptionKey + "'\n"
+              << "* Les autre utilisateurs doivent faire 'addmdp " + encryptionKey + " pour pouvoir communiquer avec vous.\n"
+              << "* Pour pouvoir reçevoir les messages des autres utilisateurs faites 'addmdp leurmotdepasse'\n"
+              << "* Vous pouvez changer votre mot de passe avec la commande 'mdp votrenouveaumdp'\n" << std::endl;
 
     std::thread serverThread(runServer);
 
@@ -94,7 +94,7 @@ int main() {
 
             encryptionKey = userMessage.substr(4, userMessage.length());
             std::cout << "*\n"
-                      << "* Your new key is '"
+                      << "* Votre nouveau mot de passe est désormait '"
                       << encryptionKey
                       << "'\n"
                       << "*\n" << std::endl;
@@ -105,9 +105,9 @@ int main() {
 
             keysArray.push_back(addKey);
             std::cout << "*\n"
-                      << "* The key '"
+                      << "* La clé '"
                       << addKey
-                      << "' has been added\n"
+                      << "' a était ajouté\n"
                       << "*\n"
                       << std::endl;
         } else if (userMessage.find("broadcastIp ") == 0) {
@@ -115,7 +115,7 @@ int main() {
             broadcastAddress = userMessage.substr(12, userMessage.length());
 
             std::cout << "*\n"
-                      << "* Broadcast address set to '"
+                      << "* L'addresse de broadcast est désormait '"
                       << broadcastAddress + "'"
                       << "*\n"
                       << std::endl;
