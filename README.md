@@ -48,17 +48,17 @@ Simply download the latest release (with your prefered language, French or Engli
 ## 🤔 How does it work ?
 
 - Client side (send):
-  When starting Dynamic.Chat an encryption key is created using the current Windows session's username and the current seconds (time).
-  That encryption key is saved and used to encrypt outgoing messages using a XOR encryption.
-  After the message is encrypted, its broadcasted on port 888/UDP on a LAN scale.
+  - When starting Dynamic.Chat an encryption key is created using the current Windows session's username and the current seconds (time).
+  - That encryption key is saved and used to encrypt outgoing messages using a XOR encryption.
+  - After the message is encrypted, its broadcasted on port 888/UDP on a LAN scale.
 
 - Server side (receive):
-  When starting Dynamic.Chat the listening server is started on a new thread an runs in the background.
-  It listens to all available addresses on port 888/UDP.
-  When receiving a message on that port, it will try and decrypt the packet's messages using the provided encryption keys (using 'addmdp').
-  If the decryption succeeds, the beginning of the message will start with "IDENT=thekeyusedtodecrypt" which confirms that the message has been decrypted correctly.
-  After the decryption succeeded, the sender's username is extract from the packet's message in the field "USER=senderusername". The username is defined based on the sender's Windows session username.
-  Finally we extract the message and format it in the following format "current time | sender's username: sender's message", the message is then displayed to the console.
+  - When starting Dynamic.Chat the listening server is started on a new thread an runs in the background.
+  - It listens to all available addresses on port 888/UDP.
+  - When receiving a message on that port, it will try and decrypt the packet's messages using the provided encryption keys (using 'addmdp').
+  - If the decryption succeeds, the beginning of the message will start with "IDENT=thekeyusedtodecrypt" which confirms that the message has been decrypted correctly.
+  - After the decryption succeeded, the sender's username is extract from the packet's message in the field "USER=senderusername". The username is defined based on the sender's Windows session username.
+  - Finally we extract the message and format it in the following format "current time | sender's username: sender's message", the message is then displayed to the console.
 
 ## 🔔 Releases/Updates
 
