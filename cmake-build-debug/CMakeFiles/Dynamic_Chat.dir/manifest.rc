@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/Cyril/CLionProjects/Dynamic.Chat/cmake-build-debug/CMakeFiles/Dynamic_Chat.dir/embed.manifest"

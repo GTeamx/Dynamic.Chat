@@ -3,6 +3,7 @@
 #include <lmcons.h>
 #include <vector>
 #include <thread>
+#include <string>
 
 void runServer();
 char * translateEncryptionKey(std::string encryptionKey);

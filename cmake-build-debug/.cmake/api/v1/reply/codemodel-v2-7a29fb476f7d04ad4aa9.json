@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Dynamic_Chat::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Dynamic_Chat-Debug-0bdaa1811d9e1d0ff685.json",
+					"jsonFile" : "target-Dynamic_Chat-Debug-1965ccd1376025c676c0.json",
 					"name" : "Dynamic_Chat",
 					"projectIndex" : 0
 				}
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }
