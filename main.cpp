@@ -3,6 +3,7 @@
 #include <lmcons.h>
 #include <vector>
 #include <thread>
+#include <string>
 
 void runServer();
 char * translateEncryptionKey(std::string encryptionKey);
@@ -123,6 +124,8 @@ int main() {
         } else {
 
             std::string message = XOR("IDENT=" + encryptionKey + "USER=" + username + "," + userMessage, translateEncryptionKey(encryptionKey));
+
+            std::cout << message;
 
             // Send UDP packet to broadcast
             sendto(clientSocket, message.c_str(), strlen(message.c_str()) + 1, 0, (sockaddr *) &clientSocketConfig,
