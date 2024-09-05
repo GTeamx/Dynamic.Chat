@@ -1,5 +1,4 @@
 # ninja log v6
-8	934	7450135363628190	CMakeFiles/Dynamic_Chat.dir/main.cpp.obj	7751f8cbff3d4165
-934	1154	7450135372885968	Dynamic_Chat.exe	304d3d7e641e7548
-8	461	7466694213719013	CMakeFiles/Dynamic_Chat.dir/main.cpp.obj	3578b3ca9400ef53
-461	624	7466694218248149	Dynamic_Chat.exe	eb8ce13d5ee65088
+7	415	7472586122619596	CMakeFiles/Dynamic_Chat.dir/main.cpp.obj	8b039aa1f2bba0c7
+8	134	7472596990952574	Dynamic_Chat.exe	eb8ce13d5ee65088
+1	65	7472671794715526	build.ninja	bf7810836c35895a
